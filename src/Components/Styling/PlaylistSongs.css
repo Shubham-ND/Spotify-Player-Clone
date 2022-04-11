@@ -1,6 +1,5 @@
 .songs_banner {
   display: flex;
-  /* border: 1px solid blue; */
   height: 340px;
   align-items: flex-end;
   padding-bottom: 25px;
@@ -29,7 +28,6 @@
 .songs_banner > img {
   object-fit: contain;
   width: 230px;
-  /* border: 1px solid yellowgreen; */
 }
 
 .songs_banner_title {
@@ -46,7 +44,6 @@
   padding: 20px 0;
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .playbar_icon {
@@ -81,7 +78,6 @@
 }
 
 .song_row a {
-  /* text-decoration: none; */
   color: white;
 }
 

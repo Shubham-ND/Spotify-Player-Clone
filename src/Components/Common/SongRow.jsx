@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { faPause } from "@fortawesome/free-solid-svg-icons";
-import { playSelectedSong } from "../../Services/spotify";
 
 const SongRow = ({
   index,
@@ -18,10 +16,6 @@ const SongRow = ({
   playSong,
   artists,
 }) => {
-  // const artists = song?.track?.artists.reduce((allArtists, rec, index) => {
-  //   allArtists.push(rec.name);
-  //   return allArtists;
-  // };
   return (
     <div className="song_row">
       <div className="index">

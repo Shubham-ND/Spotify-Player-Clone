@@ -16,13 +16,11 @@ const Header = ({ pathname }) => {
 
   const logOutUser = () => {
     localStorage.removeItem("token");
-    console.log("logged out");
     navigate("/login", {
       replace: true,
     });
   };
 
-  console.log(pathname);
   const isVisibile = () => {
     return pathname === "/search" ? "search visible" : "search";
   };

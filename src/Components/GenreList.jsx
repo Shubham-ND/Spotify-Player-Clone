@@ -9,7 +9,6 @@ const GenreList = () => {
     const spotify = getSpotify(localStorage.getItem("token"));
     spotify.getCategories().then((categories) => {
       setCategories(categories.categories.items);
-      console.log("categories", categories);
     });
   }, []);
 

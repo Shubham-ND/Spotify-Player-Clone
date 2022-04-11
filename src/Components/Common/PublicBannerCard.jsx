@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigate } from "react-router";
 import "../Styling/PublicBannerCard.css";
 
 const PublicBannerCard = ({

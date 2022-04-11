@@ -1,16 +1,12 @@
 import React from "react";
-import "./Styling/Login.css";
 import { getTokenFromUrl, loginUrl } from "../Services/spotify";
-import { Navigate, useNavigate } from "react-router";
+import { Navigate } from "react-router";
+import "./Styling/Login.css";
 
 const Login = () => {
-  console.log(process.env.REACT_APP_CLIENT_ID);
-  console.log("login called");
-  const navigate = useNavigate();
   if (localStorage.getItem("token")) return <Navigate to="/" replace />;
 
   const token = getTokenFromUrl();
-  console.log(token);
   if (token) {
     localStorage.setItem("token", token);
     return <Navigate to="/" replace />;

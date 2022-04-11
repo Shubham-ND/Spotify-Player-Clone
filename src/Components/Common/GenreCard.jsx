@@ -1,8 +1,6 @@
 import React from "react";
 
 const GenreCard = ({ title, image }) => {
-  //   let bg_color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  //   bg_color = bg_color ? bg_color : "rgb(245, 160, 52)";
   let x = Math.floor(Math.random() * 256);
   let y = Math.floor(Math.random() * 256);
   let z = Math.floor(Math.random() * 256);

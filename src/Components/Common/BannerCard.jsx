@@ -2,12 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import "../Styling/Banner.css";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const BannerCard = ({ url, title, showPlay, id }) => {
   const navigate = useNavigate();
   const redirectToPlaylist = () => {
-    // console.log("clicked");
     navigate(`playlists/${id}`);
   };
 

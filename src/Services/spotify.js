@@ -3,7 +3,6 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { useDataLayerValue } from "./DataLayer";
 
 const authEndpoint = "https://accounts.spotify.com/authorize";
-// const redirectUri = "https://spotify-player-88dbd.web.app/login";
 const redirectUri = "http://localhost:3000/login";
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
@@ -76,12 +75,14 @@ export const spotifyApi = async ({ type, payload }) => {
       window.location = "/";
       return;
     }
-    toast("Please make sure spotify is up and running");
+    toast(
+      "Please make sure spotify is up and running and you have spotify premium."
+    );
     return ex;
   }
 };
 
-export const playSelectedSong = async (context_uri, offset, curr_song) => {
+export const playSelectedSong = async (context_uri, offset) => {
   return await spotifyApi({
     type: "PLAY_SELECTED_SONG",
     payload: {

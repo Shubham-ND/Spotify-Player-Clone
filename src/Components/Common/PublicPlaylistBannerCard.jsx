@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "../Styling/PublicPlaylistBannerCard.css";
 import PublicBannerCard from "./PublicBannerCard";
 
@@ -7,7 +7,6 @@ const PublicPlaylistBannerCard = ({ playlists, heading, type }) => {
   const navigate = useNavigate();
 
   const handleOnBannerCardClick = (playlist, id) => {
-    console.log(id, type);
     if (type === "album") {
       navigate(`/playlists/${id}`, { state: playlist });
       return;
@@ -15,7 +14,6 @@ const PublicPlaylistBannerCard = ({ playlists, heading, type }) => {
   };
 
   return (
-    // {playlists.length >0 && }
     <>
       {playlists.length > 0 && (
         <>

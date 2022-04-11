@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router";
 import { faEllipsis, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,7 @@ import "./Styling/PlaylistSongs.css";
 const PlaylistSongs = () => {
   const { state: showPlaylist } = useLocation();
   const { id } = useParams();
-  const [{ currently_playing, songs }, dispatch] = useDataLayerValue();
+  const [{ songs }, dispatch] = useDataLayerValue();
   const playlist = usePlaylistContext();
   let curr_playlist = null;
 
@@ -46,7 +46,6 @@ const PlaylistSongs = () => {
   }
 
   useEffect(() => {
-    console.log("useEffect Called");
     const loadPlaylist = async () => {
       const songs = await spotifyApi({
         type: "GET_PLAYLIST_SONGS",

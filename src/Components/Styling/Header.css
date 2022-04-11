@@ -21,7 +21,6 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 65px;
   max-height: 65px;
-  /* background-color: rgb(89, 89, 194); */
   width: 100%;
 }
 
@@ -30,9 +29,6 @@
   display: flex;
   visibility: hidden;
   /* border: 1px solid greenyellow; */
-  /* flex: 0.5; */
-  /* width: 50%; */
-  /* max-width: 50%; */
 }
 
 .header_right {
@@ -64,7 +60,6 @@
   border-radius: 70px;
   background-color: white;
   /* border-radius: 50px; */
-  /* flex: 0.8; */
   width: 100%;
   padding: 5px 0;
   max-width: 350px;
@@ -83,7 +78,6 @@
 .search > input {
   border: 2px solid white;
   width: 100%;
-  /* max-width: 100%; */
   border: none;
   outline: none;
 }

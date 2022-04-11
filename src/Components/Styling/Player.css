@@ -21,12 +21,9 @@
   /* background-color: #191414; */
   background: linear-gradient(rgba(15, 41, 87, 0.9), rgba(0, 0, 1, 1) 50%);
   width: 100%;
-  /* width: 100vw; */
   height: 100%;
-  /* z-index: -1; */
   overflow-y: scroll;
   overflow-x: hidden;
-  /* height: 100%; */
   z-index: 1;
 }
 
@@ -43,12 +40,3 @@
     padding: 0 10px;
   }
 }
-
-/* .body_area {
-  border: 1px solid black;
-  height: 350px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-} */

@@ -1,5 +1,4 @@
 .public_playlistBanner {
-  /* height: 330px; */
   display: flex;
   flex-direction: column;
   /* border: 1px solid red; */
@@ -18,14 +17,3 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-/* .public_playlistBannerFlex > div {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid goldenrod;
-  word-break: normal;
-  min-width: 180px;
-  flex: 1 1 100px;
-  aspect-ratio: 1/1.35;
-  padding: 10px;
-} */

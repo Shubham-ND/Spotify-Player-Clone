@@ -9,7 +9,6 @@ import { usePlaylistContext } from "../Services/Context/PlaylistContext";
 import "./Styling/Sidebar.css";
 
 const Sidebar = () => {
-  console.log("sidebar rendered");
   const playlists = usePlaylistContext();
   return (
     <div className="sidebar_container">
@@ -35,7 +34,6 @@ const Sidebar = () => {
             key={playlist.id}
             title={playlist.name}
             page={`playlists/${playlist.id}`}
-            // playlist
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { getSpotify, playSelectedSong, spotifyApi } from "../Services/spotify";
 import { PlaylistContext } from "../Services/Context/PlaylistContext";
 import { useDataLayerValue } from "../Services/DataLayer";
@@ -15,12 +15,8 @@ const Player = () => {
   const [playlists, setPlaylists] = useState("");
   const [{ currently_playing, songs }, dispatch] = useDataLayerValue();
 
-  console.log("player rendered");
-
   const handlePlay = async (action) => {
-    console.log(action);
     const res = await spotifyApi({ type: action });
-    console.log(res);
     if (!res)
       dispatch({
         type: "SET_PLAYING_STATE",
@@ -40,7 +36,6 @@ const Player = () => {
     } else {
       nextIndex = index - 1 < 0 ? songs.length - 1 : index - 1;
     }
-    console.log(songs[nextIndex], index);
     const context_uri = songs[nextIndex].track.album.uri;
     const offset = songs[nextIndex].track.track_number;
     const res = await playSelectedSong(context_uri, offset, songs[nextIndex]);
@@ -76,10 +71,8 @@ const Player = () => {
       dispatch({ type: "SET_USER", user });
     }
     loadPlaylistAndPlayback();
-    console.log("called useEffct");
   }, []);
 
-  console.log(playlists);
   return (
     <>
       <ToastContainer />
