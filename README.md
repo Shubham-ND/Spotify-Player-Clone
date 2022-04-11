@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To set up the project first you need client ID. 
+login to https://developer.spotify.com/dashboard/login then create new app, set redirect uri to `http://localhost:3000/login` and copy the client ID.
+Create .env file and set client ID as enviroment variable e.g REACT_APP_CLIENT_ID = *your client ID*.
 
 ## Available Scripts
 
