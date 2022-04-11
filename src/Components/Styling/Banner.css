@@ -1,0 +1,69 @@
+.banner_top {
+  height: 330px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  margin-bottom: 80px;
+}
+
+.banner_grid {
+  color: black;
+  /* border: 1px solid blue; */
+  flex-basis: 55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.flex_card {
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  color: white;
+  align-items: center;
+  border-radius: 3px;
+  gap: 15px;
+  background-color: rgb(55, 59, 77);
+  transition: background-color 0.2s ease-in-out;
+  /* overflow: hidden; */
+}
+
+.flex_card > img {
+  object-fit: contain;
+  max-width: 80px;
+}
+
+.flex_card > h4 {
+  flex-basis: 50%;
+}
+
+.flex_cardPlayIcon {
+  font-size: 50px;
+  padding-right: 10px;
+  color: rgb(30 215 96);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.flex_card:hover {
+  background-color: rgba(112, 112, 112);
+}
+
+.flex_card:hover .flex_cardPlayIcon {
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .banner_top {
+    height: 400px;
+  }
+  .banner_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}

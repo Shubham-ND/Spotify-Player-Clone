@@ -1,0 +1,27 @@
+.public_card {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid goldenrod; */
+  word-break: normal;
+  min-width: 180px;
+  flex: 1 1 100px;
+  padding: 19px;
+}
+
+.public_card > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.public_card > h4 {
+  margin: 5px 0 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.public_card > h5 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
